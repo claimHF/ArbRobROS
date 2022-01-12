@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot name="arbre">
+
+ <link name="base_link">
+   <visual>
+     <geometry>
+        <box size="0.3 0.3 0.1"/>
+     </geometry>
+     <origin rpy="0 0 0" xyz="0 0 -0.05"/>
+   </visual>
+ </link>
+
+ <link name="linear_y">
+   <visual>
+     <geometry>
+        <box size="0.1 0.2 0.04"/>
+     </geometry>
+     <origin rpy="0 0 0" xyz="0 0 0.01"/>
+   </visual>
+ </link>
+
+ <joint name="base_to_linear_y" type="prismatic">
+   <parent link="base_link"/>
+   <child link="linear_y"/>
+   <limit effort="1000.0" lower="-0.2" upper="0" velocity="0.5"/>
+   <origin rpy="0 0 0" xyz="0 -0.22 0.25"/>
+ </joint>
+
+ <link name="linear_z">
+   <visual>
+     <geometry>
+        <box size="0.1 0.2 0.04"/>
+     </geometry>
+     <origin rpy="0 1.57075 0" xyz="0 0.05 0.05"/>
+   </visual>
+ </link>
+
+ <joint name="base_to_linear_z" type="prismatic">
+   <parent link="base_link"/>
+   <child link="linear_y"/>
+   <limit effort="1000.0" lower="-0.2" upper="0" velocity="0.5"/>
+   <origin rpy="0 0 0" xyz="0 0 0.05"/>
+ </joint>
+
+ <link name="rotation_a">
+   <visual>
+     <geometry>
+        <cylinder length="0.02" radius="0.035"/>
+     </geometry>
+     <origin rpy="0 0 0" xyz="0 0.05 0.05"/>
+   </visual>
+ </link>
+
+ <joint name="linear_y_to_rotation_a" type="continuous">
+   <parent link="linear_Y"/>
+   <child link="rotation_a"/>
+   <axis xyz="0 1 0"/>
+   <origin xyz="0 0 0.05"/>
+ </joint>
+
+</robot>
