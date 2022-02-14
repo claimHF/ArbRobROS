@@ -1,4 +1,5 @@
 # Rhino files
 .3dm
 .obj
+.stl
 docker/moveit-arbrob/src/CMakeLists.txt
