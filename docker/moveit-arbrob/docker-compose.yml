@@ -1,0 +1,72 @@
+# This file shows how to use the moveit-dev container with a UR robot
+# using a locally mounted volume for the catkin workspace
+# To enable RVIZ with NoVNC, uncomment the commented out lines below. 
+version: '2'
+services:
+  ros-moveit:
+    image: gramaziokohler/ros-moveit-dev
+    container_name: ros-moveit
+    environment:
+      - ROS_HOSTNAME=ros-moveit
+      - ROS_MASTER_URI=http://ros-moveit:11311
+     # - ROS_MASTER_URI=http://ros-core:11311
+      - ROS_LANG_DISABLE=genlisp:gennodejs:geneus
+      - DISPLAY=host.docker.internal:0.0
+     # - DISPLAY=gui:0.0
+     # depends_on:
+     # - ros-core
+     # - gui
+    ports:
+      - "9090:9090"
+    command:
+      - roslaunch
+    #  - --wait
+      - /root/catkin_ws/src/arbrob/launch/display.launch
+    # - /root/catkin_ws/scripts/main.launch
+      - use_rviz:=true
+    volumes:
+      - ./scripts:/root/catkin_ws/scripts
+      - ./src:/root/catkin_ws/src
+
+  #ros-core:
+  #  image: gramaziokohler/ros-noetic-moveit
+  #  container_name: ros-core
+  #  ports:
+  #    - "11311:11311"
+  #  command:
+  #    - roscore
+
+  #ros-bridge:
+  #  image: gramaziokohler/ros-noetic-moveit
+  #  container_name: ros-bridge
+  #  environment:
+  #    - "ROS_HOSTNAME=ros-bridge"
+  #    - "ROS_MASTER_URI=http://ros-core:11311"
+  #  ports:
+  #    - "9090:9090"
+  #  depends_on:
+  #    - ros-core
+  #  command:
+  #    - roslaunch
+  #    - --wait
+  #    - rosbridge_server
+  #    - rosbridge_websocket.launch
+
+  #ros-fileserver:
+  #  image: gramaziokohler/ros-noetic-moveit
+  #  container_name: ros-fileserver
+  #  environment:
+  #    - ROS_HOSTNAME=ros-fileserver
+  #    - ROS_MASTER_URI=http://ros-core:11311
+  #  depends_on:
+  #    - ros-core
+  #  command:
+  #    - roslaunch
+  #    - --wait
+  #    - file_server
+  #    - file_server.launch
+
+  #gui:
+  #  image: gramaziokohler/novnc:latest
+  #  ports:
+  #    - "8080:8080"
