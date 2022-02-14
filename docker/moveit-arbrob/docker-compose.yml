@@ -22,7 +22,7 @@ services:
       - roslaunch
     #  - --wait
       - /root/catkin_ws/src/arbrob/launch/display.launch
-    # - /root/catkin_ws/scripts/main.launch
+    #  - /root/catkin_ws/scripts/main.launch
       - use_rviz:=true
     volumes:
       - ./scripts:/root/catkin_ws/scripts
