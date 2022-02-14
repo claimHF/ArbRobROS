@@ -3,3 +3,11 @@
 .obj
 .stl
 docker/moveit-arbrob/src/CMakeLists.txt
+docker/moveit-arbrob/src/arbrob/meshes/rack/collision/rack_v0.1.1.obj
+docker/moveit-arbrob/src/arbrob/meshes/rack/collision/rack_v0.1.stl
+docker/moveit-arbrob/src/arbrob/meshes/rack/visual/rack_v0.1.1.obj
+docker/moveit-arbrob/src/arbrob/meshes/rack/visual/rack_v0.1.stl
+docker/moveit-arbrob/src/arbrob/meshes/tools/printhead/collision/tool_v0.1.1.obj
+docker/moveit-arbrob/src/arbrob/meshes/tools/printhead/collision/tool_v0.1.stl
+docker/moveit-arbrob/src/arbrob/meshes/tools/printhead/visual/tool_v0.1.1.obj
+docker/moveit-arbrob/src/arbrob/meshes/tools/printhead/visual/tool_v0.1.stl
