@@ -25,3 +25,5 @@ apt-get update
 # Install dependencies
 apt-get install -y ros-${ROS_DISTRO}-joint-state-publisher ros-${ROS_DISTRO}-joint-state-publisher-gui ros-${ROS_DISTRO}-industrial-core ros-${ROS_DISTRO}-robot-state-publisher liburdfdom-tools
 apt-get install -y nano
+
+echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
