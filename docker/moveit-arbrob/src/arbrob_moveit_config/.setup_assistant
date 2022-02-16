@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: arbrob
+    relative_path: urdf/ur5_rack_with_print_tool.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/ur5_rack_with_print_tool.srdf
+  CONFIG:
+    author_name: claimHF
+    author_email: h.flothmann@claimspace.de
+    generated_timestamp: 1645022091

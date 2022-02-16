@@ -8,20 +8,31 @@ services:
     container_name: ros-moveit
     environment:
       - ROS_HOSTNAME=ros-moveit
+     # DEV
       - ROS_MASTER_URI=http://ros-moveit:11311
-     # - ROS_MASTER_URI=http://ros-core:11311
       - ROS_LANG_DISABLE=genlisp:gennodejs:geneus
+     # RUN
+     # - ROS_MASTER_URI=http://ros-core:11311
+     
+     # Xmimg
       - DISPLAY=host.docker.internal:0.0
+     # noVNC
      # - DISPLAY=gui:0.0
-     # depends_on:
+    
+    #depends_on:
      # - ros-core
+     # noVNC
      # - gui
     ports:
       - "9090:9090"
     command:
       - roslaunch
     #  - --wait
+    # develop xacro and show in rviz
       - /root/catkin_ws/src/arbrob/launch/display.launch
+    # startup Movit!
+    #  - /root/catkin_ws/src/arbrob_moveit_config/launch/demo.launch
+    #  - rviz_tutorial:=true
     #  - /root/catkin_ws/scripts/main.launch
       - use_rviz:=true
     volumes:
@@ -66,6 +77,7 @@ services:
   #    - file_server
   #    - file_server.launch
 
+  # noVNC
   #gui:
   #  image: gramaziokohler/novnc:latest
   #  ports:

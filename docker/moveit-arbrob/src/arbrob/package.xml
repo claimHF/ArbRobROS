@@ -53,7 +53,6 @@
   <!-- *** -->
   
   <buildtool_depend>catkin</buildtool_depend>
-  <buildtool_depend>catkin</buildtool_depend>
   <test_depend>roslaunch</test_depend>
   <build_export_depend>joint_state_publisher</build_export_depend>
   <build_export_depend>robot_state_publisher</build_export_depend>

@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="model" default="$(find arbrob)/urdf/ur5_with_print_tool.urdf"/>
+  <arg name="model" default="$(find arbrob)/urdf/ur5_rack_with_print_tool.urdf"/>
   <arg name="gui" default="true" />
   <arg name="rvizconfig" default="$(find arbrob)/rviz/urdf.rviz" />
 

@@ -1,24 +1,226 @@
 Panels:
   - Class: rviz/Displays
+    Help Height: 52
     Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /TF1
+        - /TF1/Frames1
+        - /TF1/Frames1/print_tool1
+        - /TF1/Frames1/print_tool1/Orientation1
+      Splitter Ratio: 0.5
+    Tree Height: 347
   - Class: rviz/Views
+    Expanded:
+      - /Current View1
     Name: Views
+    Splitter Ratio: 0.5
+Toolbars:
+  toolButtonStyle: 2
 Visualization Manager:
+  Class: ""
   Displays:
-    - Class: rviz/Grid
-      Name: Grid
-      Value: true
-    - Alpha: 0.8
-      Class: rviz/RobotModel
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
       Enabled: true
+      Line Style:
+        Line Width: 0.0299999993
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 0.800000012
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        U0DF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        axisA:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ee_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        print_tool:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rack:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        servo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        servo_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wrist_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wrist_3_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
       Value: true
+      Visual Enabled: true
     - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        U0DF:
+          Value: false
+        axisA:
+          Value: false
+        base:
+          Value: false
+        base_link:
+          Value: false
+        ee_link:
+          Value: false
+        forearm_link:
+          Value: false
+        print_tool:
+          Value: false
+        rack:
+          Value: false
+        servo:
+          Value: false
+        servo_link:
+          Value: false
+        shoulder_link:
+          Value: false
+        tcp:
+          Value: true
+        tool0:
+          Value: false
+        upper_arm_link:
+          Value: false
+        ur_link:
+          Value: false
+        world:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
+      Marker Scale: 1
       Name: TF
-      Value: false
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          rack:
+            servo_link:
+              servo:
+                axisA:
+                  U0DF:
+                    {}
+            ur_link:
+              base_link:
+                base:
+                  {}
+                shoulder_link:
+                  upper_arm_link:
+                    forearm_link:
+                      wrist_1_link:
+                        wrist_2_link:
+                          wrist_3_link:
+                            ee_link:
+                              {}
+                            tool0:
+                              print_tool:
+                                tcp:
+                                  {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
   Global Options:
-    Fixed Frame: base_link
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: rack
     Frame Rate: 30
   Name: root
   Tools:
@@ -27,11 +229,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.7
+      Distance: 1.90400004
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.0599999987
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.0500000007
+      Invert Z Axis: false
       Name: Current View
-      Pitch: 0.33
+      Near Clip Distance: 0.00999999978
+      Pitch: 0.320000023
+      Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.5
+      Yaw: 0.281813473
+    Saved: ~
 Window Geometry:
+  Displays:
+    collapsed: false
   Height: 800
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000010000000000000150000002defc0200000002fb000000100044006900730070006c006100790073010000002c000001c00000009900fffffffb0000000a0056006900650077007301000001f00000011a0000008200ffffff0000035c000002de00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
   Width: 1200
+  X: 60
+  Y: 83
